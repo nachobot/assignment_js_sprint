@@ -12,8 +12,19 @@ var sprintFunctions = {
 //sprintFunctions.largestEl([90,2]);
 
 
-  reversed: function(){  
+  reversed: function(myString){  
     // your code here
+    var reversedString ="";
+    if (myString.length == 0)
+    {
+	return myString;
+    }
+    for (let i=myString.length- 1; i >= 0 ; i--)
+    {
+      reversedString += myString[i];
+    }
+
+    return reversedString;
   },
 
   loudSnakeCase: function(){  
