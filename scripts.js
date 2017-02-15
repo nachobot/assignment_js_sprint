@@ -1,10 +1,17 @@
 // FILL IN THE FUNCTIONS BELOW
 
 var sprintFunctions = {
-  largestEl: function(){  
+   largestEl: function(myArray){  
     // your code here
+    myArray.sort(function descending(a,b){
+		return (b-a);
+        });
+    return myArray[0];  
   },
-  
+
+//sprintFunctions.largestEl([90,2]);
+
+
   reversed: function(){  
     // your code here
   },
@@ -29,4 +36,5 @@ var sprintFunctions = {
   primes: function(){  
     // your code here
   },
+
 }
