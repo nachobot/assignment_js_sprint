@@ -27,8 +27,28 @@ var sprintFunctions = {
     return reversedString;
   },
 
-  loudSnakeCase: function(){  
+  loudSnakeCase: function(mySentence){  
+     
     // your code here
+    // 1. Seperate out the words 
+    var re= /\w+\s*/g;
+    var myArray = mySentence.match(re);
+   
+    var loudString = "";
+
+    // 2. Strip out the spaces
+    for (let i =0; i < myArray.length; i++){
+        var trimmedString = myArray[i].trim();
+        var modString = (trimmedString.charAt(0)).toUpperCase() + trimmedString.slice(1);
+        if (i != myArray.length - 1){
+	  modString +=  "_";
+	}
+        
+        loudString += modString;
+      
+    }
+    return modString;  
+  
   },
 
   compareArrays: function(){ 
