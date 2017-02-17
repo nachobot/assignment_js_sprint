@@ -1,18 +1,18 @@
 // FILL IN THE FUNCTIONS BELOW
 
 var sprintFunctions = {
-   largestEl: function(myArray){  
+   largestEl: function(myArray){
     // your code here
     myArray.sort(function descending(a,b){
 		return (b-a);
         });
-    return myArray[0];  
+    return myArray[0];
   },
 
 //sprintFunctions.largestEl([90,2]);
 
 
-  reversed: function(myString){  
+  reversed: function(myString){
     // your code here
     var reversedString ="";
     if (myString.length == 0)
@@ -27,13 +27,13 @@ var sprintFunctions = {
     return reversedString;
   },
 
-  loudSnakeCase: function(mySentence){  
-     
+  loudSnakeCase: function(mySentence){
+
     // your code here
-    // 1. Seperate out the words 
+    // 1. Seperate out the words
     var re= /\w+\s*/g;
     var myArray = mySentence.match(re);
-   
+
     var loudString = "";
 
     // 2. Strip out the spaces
@@ -43,44 +43,95 @@ var sprintFunctions = {
         if (i != myArray.length - 1){
 	  modString +=  "_";
 	}
-        
+
         loudString += modString;
-      
+
     }
-    return modString;  
-  
+    return modString;
+
   },
 
-  compareArrays: function(array1, array2){ 
+  compareArrays: function(array1, array2){
     // your code here (replace the return)
     if (array1.length != array2.length){
 
      return false;
-    
+
     }
-    
+
     for (let i = 0; i < array1.length; i++){
 
      if (array1[i] != array2[i]) {
 
           return false;
-        
+
       }
-   
-    } 
+
+    }
     return true;
-  
+
   },
 
-  fizzBuzz: function(){  
+  fizzBuzz: function(fizzNumber){
+    // your code here
+	var fizzArray = [];
+
+	for (let i = 0; i < fizzNumber; i++){
+
+		var value = i+1;
+
+		var strValue = value.toString();
+
+		//console.log(value);
+
+
+	        if ((value % 15) == 0){
+
+		strValue = "FIZZBUZZ";
+
+	  	}
+
+		else{
+
+		 if ((value % 3) == 0) {
+
+	              strValue = "FIZZ";
+
+		 }
+
+		if ((value % 5) == 0) {
+
+	              strValue = "BUZZ";
+
+		   }
+
+		 }
+
+		// console.log(strValue);
+
+	  	fizzArray.push(strValue);
+
+
+      }
+
+		//console.log(fizzArray);
+
+	  return fizzArray;
+
+	 
+	 //
+
+//console.log(fizzBuzz(45));
+
+
+
+  },
+
+  myMap: function(){
     // your code here
   },
 
-  myMap: function(){  
-    // your code here
-  },
-
-  primes: function(){  
+  primes: function(){
     // your code here
   },
 
